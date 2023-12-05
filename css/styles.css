@@ -33,10 +33,11 @@ ul{
 ul li{
     list-style:none;
     display: flex;
+    
 }
 
-ul li.actual{
-    color: #cc337a;
+ul li .actual{
+    color: #cc337a !important;
 }
 
 header{
@@ -46,7 +47,7 @@ header{
     color: #898989;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 header div{
@@ -61,7 +62,7 @@ header div{
     }
 
     nav{
-        width: 60%;
+        width: 100%;
     }
 
 main{
@@ -69,6 +70,7 @@ main{
     padding: 0 0 40px 0;
 }
 
+    /* elementos de MAIN */
     main .contGenMain{
         width: 100%;
         max-width: 80%;
@@ -101,6 +103,7 @@ main{
         text-align: center;
     }
 
+    /* elementos de PAFS */
     main .contPafGen{
         max-width: 60%;
         margin: 0 auto;
@@ -115,6 +118,7 @@ main{
         color: #cc337a;
     }
 
+    /* elementos de PRODUCTOS */
     main .contGenProd{
         display: flex;
         justify-content: space-evenly;
@@ -152,29 +156,49 @@ main{
         margin: 0 auto;
     }
 
+    /* elementos de CONTACTO */
     main form.formContact{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         margin-bottom: 50px;
+        margin-top: 50px;
     }
 
         main form.formContact .contFormSup{
             width: 100%;
-            max-width: 80%;
+            max-width: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         main form.formContact .contFormMed{
             width: 100%;
-            max-width: 80%;
+            max-width: 400px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
+        }
+
+        main form.formContact .contFormMed .textarea{
+            min-height: 200px;
+        }
+
+        main form.formContact .btnsub{
+            background-color: #cc337a;
+            padding: 10px 76px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 30px;
+            color: white;
+        }
+
+        main form.formContact .btnsub:hover{
+            background-color: #851b4c;
         }
 
     main .mapUbic iframe{
@@ -182,6 +206,7 @@ main{
         margin-bottom: -50px;
     }
 
+/* elementos de footer */
 footer{
     background-color: #2A2A2A;
     color: #898989;
@@ -193,6 +218,7 @@ footer{
         font-size: .7rem;
     }
 
+    /* elementos de redes sociales */
     footer div.nets{
         display: flex;
         align-items: center;
@@ -214,3 +240,44 @@ footer{
         footer div.nets button i{
             font-size: 1.4rem;
         }
+
+/* ---------------------------------------------------- */
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width:800px){
+
+    /* elementos de menu mobile */
+    header ul li{
+        list-style:none;
+        display: flex;
+        min-height: 50px;
+    }
+
+    #navbarNav{
+        padding-top: 50px;
+    }
+
+    .navbar-toggler{
+        border: none !important;
+    }
+
+    /* elementos del main */
+    .contGenMain{
+        flex-direction: column-reverse;
+    }
+
+    .contGenMain img{
+        max-width: 100% !important;
+        padding: none;
+    }
+
+    /* elementos de PAFS */
+    .contPafGen{
+        max-width: 85% !important;
+    }
+
+    /* elementos de PRODUCTOS */
+    .contGenProd{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,283 @@
+*{
+    clear: both;
+    user-select: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    line-height: 0;
+}
+
+a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul li{
+    list-style:none;
+    display: flex;
+    
+}
+
+ul li .actual{
+    color: #cc337a !important;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: #2A2A2A;
+    color: #898989;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    img{
+        height: 20px;
+        padding: 0 0 0 20px;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+main{
+    background-color: white;
+    padding: 0 0 40px 0;
+}
+
+    /* elementos de MAIN */
+    main .contGenMain{
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .txtGenmainExplain{
+        padding: 20px;
+    }
+
+    main .contGenMain img{
+        width: 100%;
+        max-width: 40%;
+        height: auto;
+        padding: 20px;
+    }
+
+    main section.sectionTit{
+        background-color: #ECECEC;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main section.sectionTit p{
+        text-align: center;
+    }
+
+    /* elementos de PAFS */
+    main .contPafGen{
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 5px 0;
+    }
+
+    main .contPafGen .titlePrinc{
+        border-bottom: 1px solid #cc337a;
+        padding: 10px 5px;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        color: #cc337a;
+    }
+
+    /* elementos de PRODUCTOS */
+    main .contGenProd{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+        main .contProdInd{
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        main .contProdInd .imgProd{
+            width: 200px;
+            height: 250px;
+            background-color: #898989;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+        }
+
+        main .contProdInd p{
+            color: #898989;
+            text-transform: uppercase;
+        }
+
+        main .contProdInd img{
+            max-width: 100px;
+        }
+
+    main .subExplain{
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /* elementos de CONTACTO */
+    main form.formContact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+        main form.formContact .contFormSup{
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        main form.formContact .contFormMed{
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        main form.formContact .contFormMed .textarea{
+            min-height: 200px;
+        }
+
+        main form.formContact .btnsub{
+            background-color: #cc337a;
+            padding: 10px 76px;
+            border-radius: 20px;
+            border: none;
+            margin-top: 30px;
+            color: white;
+        }
+
+        main form.formContact .btnsub:hover{
+            background-color: #851b4c;
+        }
+
+    main .mapUbic iframe{
+        width: 100%;
+        margin-bottom: -50px;
+    }
+
+/* elementos de footer */
+footer{
+    background-color: #2A2A2A;
+    color: #898989;
+    padding: 20px;
+}
+
+    footer p{
+        text-align: center;
+        font-size: .7rem;
+    }
+
+    /* elementos de redes sociales */
+    footer div.nets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+    }
+
+    footer div.nets button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid white;
+        text-align: center;
+        margin: 10px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+        footer div.nets button i{
+            font-size: 1.4rem;
+        }
+
+/* ---------------------------------------------------- */
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width:800px){
+
+    /* elementos de menu mobile */
+    header ul li{
+        list-style:none;
+        display: flex;
+        min-height: 50px;
+    }
+
+    #navbarNav{
+        padding-top: 50px;
+    }
+
+    .navbar-toggler{
+        border: none !important;
+    }
+
+    /* elementos del main */
+    .contGenMain{
+        flex-direction: column-reverse;
+    }
+
+    .contGenMain img{
+        max-width: 100% !important;
+        padding: none;
+    }
+
+    /* elementos de PAFS */
+    .contPafGen{
+        max-width: 85% !important;
+    }
+
+    /* elementos de PRODUCTOS */
+    .contGenProd{
+        flex-direction: column;
+    }
+}
